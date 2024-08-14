@@ -1,4 +1,5 @@
-﻿using BasicApp.Models;
+﻿using BasicApp.DTos;
+using BasicApp.Models;
 using BasicApp.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
@@ -26,12 +27,12 @@ public class EmployeeController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> AddEmployee([FromBody] Employee newEmployee)
+    public async Task<IActionResult> AddEmployee([FromBody] EmployeeAddDTO employeeAddDto)
     {
 
-        await _employeesrepository.AddNewEmployee(newEmployee);
+        await _employeesrepository.AddNewEmployee(employeeAddDto);
         
-        return Created("api/employee", newEmployee);
+        return Created("api/employee", employeeAddDto);
     }
 
     [HttpPut]

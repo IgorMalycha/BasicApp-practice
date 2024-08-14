@@ -1,4 +1,5 @@
 ﻿using BasicApp.Context;
+using BasicApp.DTos;
 using BasicApp.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,9 +18,15 @@ public class Employeesrepository : IEmployeesrepository
         return await _context.Employees.ToListAsync();
     }
 
-    public async Task AddNewEmployee(Employee newEmployee)
+    public async Task AddNewEmployee(EmployeeAddDTO newEmployee)
     {
-        await _context.Employees.AddAsync(newEmployee);
+        Employee newEmployeeObj = new Employee()
+        {
+            Name = newEmployee.Name,
+            Age = newEmployee.Age,
+            IsActive = newEmployee.IsActive
+        };
+        await _context.Employees.AddAsync(newEmployeeObj);
         await _context.SaveChangesAsync();
     }
 
@@ -33,7 +40,7 @@ public class Employeesrepository : IEmployeesrepository
 
         await _context.SaveChangesAsync();
     }
-
+    
     public async Task DeleteEmployee(int id)
     {
         Employee emplyeeToRemove = await _context.Employees.FirstOrDefaultAsync(e => e.EmployeeId == id);

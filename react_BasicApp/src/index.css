@@ -1,0 +1,210 @@
+*{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: hsl(0, 0%, 100%);
+}
+.SubmitContainer{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 2.5vh;
+}
+
+.SubmitContainer input{
+    font-size: 2vh;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: hsla(208, 12%, 76%, 0.267);
+}
+
+.SubmitBtn{
+font-size: 2vh;
+padding: 10px;
+border-radius: 10px;
+color: white;
+background-color: #007bff;
+border: 1px solid;
+width: 10%;
+cursor: pointer;
+}
+
+.SubmitBtn:hover{
+  background-color: #0056b3;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.233)
+}
+
+/* Podstawowe style tabeli */
+.table {
+    font-size: 2.2vh;
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  table {
+    width: 100%;
+    border-spacing: 0;
+  }
+  
+  th, td {
+    padding: 18px 15px;
+    text-align: center;
+  }
+  
+  /* Styl nagłówków tabeli */
+  thead th {
+    background-color: #f4f6f9;
+    color: #333;
+    font-weight: 600;
+    border-bottom: 2px solid #e0e0e0;
+  }
+  
+  /* Styl dla wierszy tabeli */
+  tbody tr {
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  tbody tr:last-child {
+    border-bottom: none;
+  }
+  
+  tbody tr:hover {
+    background-color: #f1f5f8;
+  }
+  
+  /* Styl dla komórek tabeli */
+  td {
+    color: #555;
+  }
+  
+  /* Stylowanie kolumny z przyciskami */
+  td:last-child {
+    display: flex;
+    gap: 10px;
+    
+  }
+
+  /* Styl przycisków */
+  .EditBtn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 7vh;
+  }
+  
+  .EditBtn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.233)
+  }
+  
+  .DeleteBtn {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 10vh;
+  }
+  
+  .DeleteBtn:hover {
+    background-color: #c82333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.233)
+  }
+
+  .options-cell {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  th:last-child {
+    text-align: center;
+  }
+  
+  td:last-child {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+
+  .editPopup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 0%, 0.219);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .editPopup-inner{
+    position: relative;
+    width:65%;
+    padding: 10px 20px 30px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .FieldsContainer{
+    display: flex;
+    gap: 20px;
+    border-top: 1px solid #00000018;
+    padding: 40px 10px;
+    border-bottom: 1px solid #00000018;
+    width: 100%;
+  }
+
+  .FieldsContainer input{
+    font-size: 1.8vh;
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  .popup-functionBtns{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    margin-top: 10px;
+  }
+
+  .popup-functionBtns button{
+    font-size: 2vh;
+    border-radius: 10px;
+    padding: 8px;
+    color: white;
+    border: none;
+  }
+
+  .cancelBtn{
+    background-color: #555;
+  }
+
+  .cancelBtn:hover{
+    background-color: #353535e5;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.233)
+  }
+
+  .SaveChangesBtn{
+    background-color: #007bff;
+  }
+
+  .SaveChangesBtn:hover{
+    background-color: #0056b3;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.233)
+  }
