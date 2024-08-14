@@ -78,7 +78,8 @@ cursor: pointer;
   
   /* Styl dla komórek tabeli */
   td {
-    color: #555;
+    color: #4b4b4b;
+    border-bottom: 1px solid #5857573b;
   }
   
   /* Stylowanie kolumny z przyciskami */
